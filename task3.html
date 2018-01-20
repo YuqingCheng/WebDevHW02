@@ -1,0 +1,44 @@
+<DOCTYPE html>
+<html>
+	<head>
+	    <link rel="stylesheet" type="text/css" href="task3.css">
+		<title>Task 3</title>
+	</head>
+	<body>
+		<div style="text-align: center;"><h1>HW02 Task Three</h1></div>
+		<div>
+			<div class="list">
+				<ul>
+					<li><a id="link1">Lorem Ipsem</a></li>
+					<li><a id="link2">99 Bottles</a></li>
+					<li><a id="link3">Last Thing</a></li>
+				</ul>
+			</div>
+			<div class="content"><p id="content"></p></div>
+		</div>
+		<script type="text/javascript">
+			const lorem_ipsem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mi nibh, ornare in lectus et, sodales efficitur nisl. Donec condimentum, urna vel condimentum ultricies, quam magna feugiat risus, at sollicitudin diam ante ut massa. In nulla libero, scelerisque id arcu sed, semper elementum urna. Sed vestibulum tincidunt neque, eget placerat nulla venenatis vitae. In hac habitasse platea dictumst. Integer lacinia lobortis sollicitudin. Vestibulum pulvinar, felis at efficitur laoreet, ex odio varius quam, at dictum enim quam vitae risus. Praesent faucibus facilisis malesuada. Ut vel ullamcorper arcu. Ut vulputate magna a nulla dignissim volutpat. Nullam erat elit, pharetra eu convallis id, faucibus hendrerit leo. Pellentesque ac felis ut lorem consectetur ultrices at ut quam. Suspendisse et massa aliquet dolor volutpat auctor. Ut id ornare magna. Nullam nec magna quis risus ornare fringilla.\n\nMaecenas convallis faucibus enim vitae venenatis. Donec pharetra lorem sit amet nulla rhoncus fermentum. Nulla euismod elit nisl, sit amet mattis arcu scelerisque in. Ut euismod turpis lectus, vel pellentesque orci rutrum vitae. Donec non consectetur velit. Donec porta dolor sed est semper tincidunt. Nullam justo sapien, sollicitudin non scelerisque vitae, suscipit vel lacus. Nunc in diam neque. Proin mollis vehicula eleifend.\n\nNunc eu nunc dui. Etiam egestas massa eget orci ultrices laoreet sed nec erat. Nam hendrerit posuere dolor sit amet pulvinar. Fusce aliquam diam nunc, at sagittis massa pretium a. Etiam et venenatis quam. Proin ut nisl quis odio molestie aliquam vitae in libero. Nulla facilisi. Vestibulum ut libero ex. Nulla nisl mauris, dictum tincidunt orci sit amet, luctus luctus dolor. Integer gravida nunc a nibh blandit iaculis. In tempor, erat ut pretium vestibulum, sem magna porttitor dui, consequat sodales lorem elit ut nunc. Proin sagittis libero metus, ac maximus nisi pellentesque in. Proin lectus turpis, fermentum sed erat in, consequat ultrices orci.\n\nSuspendisse commodo est eget diam tristique condimentum. Integer eu felis suscipit, elementum risus ut, semper urna. Sed eu eros rutrum, tincidunt mi non, ultricies lectus. Vivamus dui dolor, sodales vel ultricies non, vulputate in turpis. Sed lacinia lacus eget elit imperdiet, ut pretium justo imperdiet. Nulla pharetra, augue ac porttitor auctor, lectus leo tempor urna, ut dignissim urna dui sagittis purus. Nam eget sem ac erat rhoncus iaculis. Nunc ut nisl dui. Pellentesque cursus gravida lobortis. Ut eu vulputate lectus. Aliquam ut scelerisque magna, et pharetra sapien. Praesent id sem vel sem pellentesque dignissim. Aenean scelerisque augue sed est viverra pretium.";
+			let bottles = 99;
+			let bottles_text = "";
+			while(bottles > 95) {
+				bottles_text += bottles+" bottles of beer on the wall, "+bottles+" bottles of beer.\nTake one down, pass it around, " +(bottles-1)+" bottles of beer on the wall\n\n";
+				bottles--;
+			}
+			const last_thing = "this is the third thing";
+			var link1 = document.getElementById("link1");
+			var link2 = document.getElementById("link2");
+			var link3 = document.getElementById("link3");
+			var content = document.getElementById("content");
+			content.innerText = lorem_ipsem;
+			link1.onclick = (() => {
+				content.innerText = lorem_ipsem;
+			});
+			link2.onclick = (() => {
+				content.innerText = bottles_text;
+			});
+			link3.onclick = (() => {
+				content.innerText = last_thing;
+			});
+		</script>
+	</body>
+</html>

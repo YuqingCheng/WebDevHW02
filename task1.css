@@ -1,0 +1,52 @@
+#elephant {
+	height: 450;
+	width: 300;
+}
+
+.blue {
+	color: blue;
+}
+
+.red {
+	color: red;
+}
+
+.orange {
+	color: orange;
+}
+
+.green {
+	color: green;
+}
+
+.purple {
+	color: purple;
+}
+
+.cyan {
+	color: cyan;
+}
+
+.magenta {
+	color: magenta;
+}
+
+.black {
+	color: black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+   border: 2px solid black;
+}
+
+th, td {
+	text-align: center;
+	vertical-align: center;
+	width: 30px;
+	height: 15px;
+	padding: 5px;
+}
